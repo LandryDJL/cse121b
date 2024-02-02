@@ -31,19 +31,22 @@ const favoriteFoods = [
 
 let foodString = "";
 for (let i = 0; i < favoriteFoods.length; i++) {
-    foodString += `${favoriteFoods[i]} <br>`;
+    foodString += favoriteFoods[i];
+  }
+  foodElement.innerHTML += `<p>${favoriteFoods}</br></p>`;
+  
+  
+  const singleFavoriteFood = "plain rice with palm nut soup";
+  favoriteFoods.push(singleFavoriteFood);
+  foodElement.innerHTML += `<p>${favoriteFoods}</br></p>`;
+  
+  foodString = "";
+  favoriteFoods.shift();
+  foodElement.innerHTML += `<p>${favoriteFoods}</br></p>`;
+
+  favoriteFoods.pop();
+  foodElement.innerHTML += `<p>${favoriteFoods}</br></p>`;
+
+  for (let i = 0; i < favoriteFoods.length; i++) {
+    foodString += favoriteFoods[i];
 }
-
-// foodElement.innerHTML = foodString;
-
-const singleFavoriteFood = "plain rice with palm nut soup";
-favoriteFoods.push(singleFavoriteFood);
-
-foodString = "";
-favoriteFoods.shift();
-favoriteFoods.pop();
-for (let i = 0; i < favoriteFoods.length; i++) {
-    foodString += `${favoriteFoods[i]} <br>`;
-}
-
-foodElement.innerHTML = foodString;
