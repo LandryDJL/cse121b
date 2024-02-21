@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cc_main.css">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="info_app">
+            <img src="images/exchange.jpg" alt="curreny exchange">
+            <h1>CURRENCY CONVERTER</h1>
+        </div>
+        <div id="origin_currency">
+            <div id="from-bg"><label for="from">From</label></div>
+            <input id="amount_to_convert_input" type="number" required>
+            <select title="origin" id="origin_currency_select"></select>
+        </div>
+        <div id="destination_currency">
+            <div id="to-bg"><label for="to">To</label></div>
+            <input id="amount_converted_input" type="number" disabled>
+            <select title="destination" id="destination_currency_select"></select>
+        </div>
+        <div>
+            <button id="convert">Convert</button>
+            <button id="reset">Reset</button>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_info">
+            &copy; BYU Idaho 2024 | CSE121b | Jacob Landry Dally | Currency Converter App v1.0
+        </div>
+        <!-- main script -->
+        <script type="module" src="scripts/cc_main.js"></script>
+        <!-- currency codes script -->
+        <script type="module" src="scripts/cc_currency_codes.js"></script>
+    </footer>
+</body>
+</html>
